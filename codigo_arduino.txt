@@ -1,0 +1,27 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+const int buttonPin = 8;
+unsigned long previousMillis = 0;
+const long interval = 2000;
+
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(buttonPin, INPUT_PULLUP);
+  lcd.clear();
+}
+
+void loop() {
+  if (digitalRead(buttonPin) == LOW) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Mensagem Enviada");
+    previousMillis = millis();
+  }
+  
+  unsigned long currentMillis = millis();
+  
+  if (currentMillis - previousMillis >= interval) {
+    lcd.clear();
+  }
+}

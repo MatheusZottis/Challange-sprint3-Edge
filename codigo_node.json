@@ -1,0 +1,27 @@
+[
+    {
+        "id": "23cd446836738ed1",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "2a882cf8f8181fdb",
+        "name": "Bot",
+        "credtype": "account",
+        "account": "f426e484f2f897a6",
+        "text": "Olá!",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "str",
+        "rejectssl": false,
+        "x": 570,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f426e484f2f897a6",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "Bot Whats"
+    }
+]
